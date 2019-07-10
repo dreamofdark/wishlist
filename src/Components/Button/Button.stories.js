@@ -1,12 +1,24 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text } from '@storybook/addon-knobs';
-import { Button } from '@storybook/react/demo';
+import { text, boolean, select } from '@storybook/addon-knobs';
+import { Button } from './Button';
 
-storiesOf('Button2', module)
-    .add('with text', () => (
-        <Button>Hello Button</Button>
-    ))
-    .add('with emoji', () => (
-        <Button><span role="img" aria-label="so cool">{text('Btn Text', 'poka' )}</span></Button>
+const sizeOptions = {
+    middle: 'middle',
+    small: 'small',
+    default: '',
+};
+
+const styleOptions = {
+    dark: 'dark',
+    light: 'light',
+};
+
+storiesOf('Button', module)
+    .add('default', () => (
+        <Button btnText={text('BtnText', 'Кнопка')}
+                style={select('Style', styleOptions, styleOptions.dark)}
+                size={select('Size', sizeOptions, sizeOptions.default)}
+                isMobile={boolean('Mobile', false)}
+        />
     ));
