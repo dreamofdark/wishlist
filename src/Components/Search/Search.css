@@ -1,0 +1,35 @@
+.search {
+    width: 500px;
+    height: 50px;
+    border-radius: 25px;
+    border: solid 1px #dddddd;
+    background-color: #ffffff;
+    font-size: 16px;
+    padding: 0 25px;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+.search,
+.search:focus {
+    outline: none;
+}
+
+.search-results {
+    width: 500px;
+    margin-top: -25px;
+    padding-top: 30px;
+    overflow-x: hidden;
+    background-color: #ffffff;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.search_with-results {
+
+}
+
+.search-results_empty {
+    display: none;
+}

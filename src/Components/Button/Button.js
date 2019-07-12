@@ -5,7 +5,7 @@ import './Button.css';
 import { noop } from '../../Utils/helpers';
 
 
-export class Button extends Component{
+export class Button extends Component {
     static propTypes = {
         btnText: propTypes.string.isRequired,
         size: propTypes.oneOf('small', 'middle'),

@@ -1,0 +1,23 @@
+.friends {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+.friends__list {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.friends__list > * {
+    margin-left: -20px;
+}
+
+.friends__list > *:last-child {
+    margin-left: 0;
+}
+
+.friends__link {
+    color: var(--blue);
+    margin-right: 15px;
+}
