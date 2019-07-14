@@ -26,12 +26,12 @@ export class Search extends Component {
         const isResultsEmpty = results.length === 0;
 
         return (
-            <>
+            <div className="search">
                 <input type="text"
                        placeholder={placeholder}
                        onChange={onChange}
                        className={classNames({
-                           "search": true,
+                           "search__input": true,
                        })}
                 />
                 <div className={classNames({
@@ -40,7 +40,7 @@ export class Search extends Component {
                 })}>
                     { results.map(res => <SearchResult {...res} query="iPh"/>) }
                 </div>
-            </>
+            </div>
         )
     }
 }

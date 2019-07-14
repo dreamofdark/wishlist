@@ -20,4 +20,5 @@
 .friends__link {
     color: var(--blue);
     margin-right: 15px;
+    font-family: sans-serif;
 }
