@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import classNames from 'classnames';
-import './Button.css';
+import styles from './Button.module.scss';
 import { noop } from '../../Utils/helpers';
-
 
 export class Button extends Component{
     static propTypes = {
@@ -13,6 +12,7 @@ export class Button extends Component{
         isMobile: propTypes.bool,
         withIcon: propTypes.bool,
         onClick: propTypes.func,
+        isDisabled: propTypes.bool,
     };
 
     static defaultProps = {
@@ -20,18 +20,21 @@ export class Button extends Component{
         isMobile: false,
         withIcon: false,
         onClick: noop,
+        isDisabled: false,
     };
 
     render() {
-        const { btnText, size, style, onClick } = this.props;
+        const { btnText, size, style, onClick, isDisabled } = this.props;
         return (
             <button
                 className={classNames({
-                    'button': true,
-                    [`button_${style}`]: true,
-                    [`button_${size}`]: !!size,
+                    [styles.root]: true,
+                    [styles[style]]: true,
+                    [styles[size]]: !!size,
+                    [styles.disabled]: isDisabled,
                 })}
                 onClick={onClick}
+                disabled={isDisabled}
             >
                 {btnText}
             </button>

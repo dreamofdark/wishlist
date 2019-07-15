@@ -20,5 +20,6 @@ storiesOf('Button', module)
                 style={select('Style', styleOptions, styleOptions.dark)}
                 size={select('Size', sizeOptions, sizeOptions.default)}
                 isMobile={boolean('Mobile', false)}
+                isDisabled={boolean('Disabled', false)}
         />
     ));
