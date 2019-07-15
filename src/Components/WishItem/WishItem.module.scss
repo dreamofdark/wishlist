@@ -1,0 +1,38 @@
+@import "../../Styles/colors";
+@import "../../Styles/sizes";
+
+.root {
+    width: $default-element-width;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.picture {
+    width: $default-element-width;
+    object-fit: contain;
+}
+
+.infoBlock {
+    margin: 15px 0;
+    text-align: left;
+}
+
+.price {
+    color: $purple;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.itemName {
+    color: $text-black;
+    font-size: 16px;
+}
+
+.description {
+    color: $text-grey;
+    font-size: 10px;
+}

@@ -1,0 +1,13 @@
+@mixin coloredButton($light, $dark, $text) {
+    color: $text;
+    background: linear-gradient(79deg, $light, $dark);
+
+    &:hover {
+      background: $light;
+    }
+
+    &:active,
+    &:focus {
+      background: $dark;
+    }
+}

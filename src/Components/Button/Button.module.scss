@@ -1,0 +1,29 @@
+@import "../../Styles/colors";
+@import "./ButtonStyle";
+
+.root {
+    width: 200px;
+    height: 40px;
+    font-size: 14px;
+    border-radius: 21px;
+    border: none;
+    outline: none;
+}
+
+.dark {
+    @include coloredButton($blue, $purple, $text-white);
+}
+
+.light {
+    @include coloredButton($light-blue, $light-purple, $text-black);
+}
+
+.disabled {
+    background: $grey;
+    color: $text-black;
+
+    &:hover {
+        background: $grey;
+        color: $text-black;
+    }
+}
