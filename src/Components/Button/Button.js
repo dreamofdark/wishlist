@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
 import classNames from 'classnames';
-import styles from './Button.module.scss';
+import './Button.css';
 import { noop } from '../../Utils/helpers';
 
-export class Button extends Component{
+
+export class Button extends Component {
     static propTypes = {
         btnText: propTypes.string.isRequired,
         size: propTypes.oneOf('small', 'middle'),
@@ -12,7 +13,6 @@ export class Button extends Component{
         isMobile: propTypes.bool,
         withIcon: propTypes.bool,
         onClick: propTypes.func,
-        isDisabled: propTypes.bool,
     };
 
     static defaultProps = {
@@ -20,21 +20,18 @@ export class Button extends Component{
         isMobile: false,
         withIcon: false,
         onClick: noop,
-        isDisabled: false,
     };
 
     render() {
-        const { btnText, size, style, onClick, isDisabled } = this.props;
+        const { btnText, size, style, onClick } = this.props;
         return (
             <button
                 className={classNames({
-                    [styles.root]: true,
-                    [styles[style]]: true,
-                    [styles[size]]: !!size,
-                    [styles.disabled]: isDisabled,
+                    'button': true,
+                    [`button_${style}`]: true,
+                    [`button_${size}`]: !!size,
                 })}
                 onClick={onClick}
-                disabled={isDisabled}
             >
                 {btnText}
             </button>

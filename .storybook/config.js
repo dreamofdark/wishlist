@@ -18,6 +18,13 @@ addParameters({
 function loadStories() {
     require('../stories/index.js');
     require('../src/Components/Button/Button.stories');
+    require('../src/Components/Search/Search.stories');
+    require('../src/Components/Search/SearchResult/SearchResult.stories');
+    require('../src/Components/Avatar/Avatar.stories');
+    require('../src/Components/Friends/Friends.stories.js');
+    require('../src/Components/ProfileMini/ProfileMini.stories.js');
+    require('../src/Components/StyledLink/StyledLink.stories.js');
+    require('../src/Components/Button/Button.stories');
     require('../src/Components/WishItem/WishItem.stories');
     require('../src/Components/Spinner/Spinner.stories');
     require('../src/index');
