@@ -14,6 +14,7 @@
     color: #000000;
     box-sizing: border-box;
     z-index: 1000;
+    margin-bottom: 50px;
 }
 
 .search__input,

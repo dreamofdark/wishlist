@@ -22,7 +22,7 @@ export class ProfileMini extends Component {
             avatar: '',
         },
         size: 'small',
-        isMobile: true,
+        isMobile: false,
         onClick: noop,
     };
 
