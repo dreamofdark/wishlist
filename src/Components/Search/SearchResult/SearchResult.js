@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
-import classNames from 'classnames';
-import './SearchResult.css';
+import styles from './SearchResult.module.scss';
 import { noop } from '../../../Utils/helpers';
 
 export class SearchResult extends Component {
@@ -25,10 +24,10 @@ export class SearchResult extends Component {
         const restOfText = text.slice(query.length);
 
         return (
-            <div className="search-result"
+            <div className={styles.result}
                  onClick={onClick}
             >
-                <span className="search-result_matched">
+                <span className={styles.result_matched}>
                     { query }
                 </span>
                 { restOfText }

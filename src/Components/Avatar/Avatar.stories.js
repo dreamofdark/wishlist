@@ -5,6 +5,9 @@ import { Avatar } from './Avatar.js';
 import photo from '../../../public/img/test.png';
 
 storiesOf('Avatar', module)
-    .add('default', () => (
+    .add('small (default)', () => (
         <Avatar src={ text('Src', photo) }/>
+    ))
+    .add('large', () => (
+        <Avatar size={'large'} src={ text('Src', photo) }/>
     ));

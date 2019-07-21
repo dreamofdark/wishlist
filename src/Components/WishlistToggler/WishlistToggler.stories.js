@@ -1,16 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { text, boolean } from '@storybook/addon-knobs';
-import { StyledLink } from './StyledLink';
+import { WishlistToggler } from './WishlistToggler';
 import { BrowserRouter, Route } from 'react-router-dom';
 
 
-storiesOf('StyledLink', module)
+storiesOf('WishlistToggler', module)
     .add('default', () => (
         <BrowserRouter>
             <Route path={''} render={() => (
-                <StyledLink text={text('Text', 'Ссылочка')}
-                            to={text('To', '#')}
+                <WishlistToggler isMyProfile={boolean('Мой профиль?', true)}
+                                 isWishPage={boolean('Страница желаемого?', false)}
                 />
             )} />
         </BrowserRouter>

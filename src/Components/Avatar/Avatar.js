@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
+import styles from './Avatar.module.css';
 import classNames from 'classnames';
-import './Avatar.css';
 import { noop } from '../../Utils/helpers';
 
 export class Avatar extends Component {
     static propTypes = {
         src: propTypes.string.isRequired,
-        size: propTypes.oneOf('small', 'middle'),
+        size: propTypes.oneOf('small', 'medium', 'large'),
         isMobile: propTypes.bool,
         onClick: propTypes.func,
     };
@@ -19,10 +19,14 @@ export class Avatar extends Component {
     };
 
     render() {
-        const background = { 'background-image': `url(${this.props.src})`};
+        const { size, src } = this.props;
+        const background = { 'background-image': `url(${src})`};
 
         return (
-            <div className="avatar" style={background}/>
+            <div className={classNames({
+                [styles.avatar]: true,
+                [styles[size]]: true,
+            })} style={background}/>
         )
     }
 }

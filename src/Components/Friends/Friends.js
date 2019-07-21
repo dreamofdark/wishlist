@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
-import classNames from 'classnames';
-import './Friends.css';
+import styles from './Friends.module.scss';
 import { noop } from '../../Utils/helpers';
-import {Avatar} from "../Avatar/Avatar.js";
+import { Avatar } from "../Avatar/Avatar.js";
 
 export class Friends extends Component {
     static propTypes = {
@@ -27,9 +26,9 @@ export class Friends extends Component {
         const { friends, onClick } = this.props;
 
         return (
-            <div className="friends" onClick={onClick}>
-                <a href="" className="friends__link">Мои друзья</a>
-                <div className="friends__list">
+            <div className={styles.root} onClick={onClick}>
+                <a href="" className={styles.link}>Мои друзья</a>
+                <div className={styles.list}>
                     {friends.slice(0,3).map( ({avatar}) => <Avatar src={avatar}/> )}
                 </div>
             </div>

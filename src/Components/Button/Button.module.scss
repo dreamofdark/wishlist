@@ -18,6 +18,12 @@
     @include coloredButton($light-blue, $light-purple, $text-black);
 }
 
+.medium {
+    height: 30px;
+    width: 150px;
+    font-size: 12px;
+}
+
 .disabled {
     background: $grey;
     color: $text-black;

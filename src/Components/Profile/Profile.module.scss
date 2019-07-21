@@ -1,0 +1,44 @@
+@import "../../Styles/colors";
+
+.root {
+    display: flex;
+    background: #fff;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.name {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0;
+    color: $text-dark-gray;
+}
+
+.medium {}
+.large {}
+
+.medium {
+    .name {
+        font-size: 25px;
+    }
+
+    .column {
+        padding: 15px 0 15px 20px
+    }
+}
+
+.large {
+    .name {
+        font-size: 40px;
+    }
+
+    .column {
+        padding: 25px 0 15px 25px;
+    }
+}
+

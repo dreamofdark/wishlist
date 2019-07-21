@@ -4,7 +4,7 @@ import { text, boolean, select } from '@storybook/addon-knobs';
 import { ProfileMini } from './ProfileMini.js';
 import photo from '../../../public/img/test.png';
 
-storiesOf('ProfileMini', module)
+storiesOf('Profile', module)
     .add('default', () => (
         <ProfileMini user={ {name: text('Имя', 'Андрей'), avatar: text('Аватар', photo)} } />
     ));
