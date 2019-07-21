@@ -1,0 +1,10 @@
+@import "../../Styles/colors";
+@import "../../Styles/sizes";
+
+.root {
+    font-size: 40px;
+    font-weight: bold;
+    color: $purple;
+    margin: 0 $default-page-margin $default-page-margin;
+
+}

@@ -8,10 +8,12 @@ import { BrowserRouter, Route } from 'react-router-dom';
 storiesOf('StyledLink', module)
     .add('default', () => (
         <BrowserRouter>
-            <Route path={''} render={() => (
-                <StyledLink text={text('Text', 'Ссылочка')}
-                            to={text('To', '#')}
-                />
-            )} />
+            <Route path={'/'}
+                   render = {() =>
+                       <StyledLink text={text('Text', 'Ссылочка')}
+                                   to={text('To', '#')}
+                        />
+                   }
+            />
         </BrowserRouter>
     ));

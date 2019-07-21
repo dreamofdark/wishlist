@@ -1,15 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { Button } from './Components/Button/Button';
-import { WishItem } from './Components/WishItem/WishItem';
-import { Gallery } from './Components/Gallery/Gallery';
-
+import { MainPage } from './Pages/Main/MainPage';
 
 function App() {
   return (
     <div className="App">
-        <Gallery/>
+        <MainPage />
     </div>
   );
 }

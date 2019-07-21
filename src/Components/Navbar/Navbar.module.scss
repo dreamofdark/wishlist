@@ -1,0 +1,8 @@
+@import "../../Styles/sizes";
+
+.root {
+    width: calc(100% - 2 * #{$default-page-margin});
+    margin: $default-page-margin;
+    display: inline-flex;
+    justify-content: space-between;
+}

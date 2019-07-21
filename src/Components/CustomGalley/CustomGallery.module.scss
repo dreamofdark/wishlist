@@ -1,10 +1,9 @@
 @import "../../Styles/sizes";;
 
-.root {
+.wrap {
     width: 800px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: $default-page-margin;
     overflow-x: hidden;
     overflow-y: scroll;
     height: 65vh;
@@ -14,10 +13,18 @@
     }
 }
 
-.gallery {
-    margin: 0 25px;
+.root {
+    column-count: 3;
+    column-width: $default-element-width;
+    column-gap: 50px;
+    margin: 0 50px;
 }
 
-.galleryItem {
-    margin: 25px;
+.item {
+    margin-bottom: 50px;
+    break-inside: avoid-column;
+}
+
+#item3 {
+    break-after: column;
 }
