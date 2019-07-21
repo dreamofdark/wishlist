@@ -1,24 +1,27 @@
-.friends {
+@import "../../Styles/colors";
+
+.root {
     display: flex;
     align-items: center;
     height: 40px;
 }
 
-.friends__list {
+.list {
     display: flex;
     flex-direction: row-reverse;
 }
 
-.friends__list > * {
+.list > * {
     margin-left: -20px;
 }
 
-.friends__list > *:last-child {
+.list > *:last-child {
     margin-left: 0;
 }
 
-.friends__link {
-    color: var(--blue);
+.link {
+    color: $blue;
     margin-right: 15px;
     font-family: sans-serif;
+    text-decoration: none;
 }

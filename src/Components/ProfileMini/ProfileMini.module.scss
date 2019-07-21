@@ -1,11 +1,14 @@
-.profile-mini {
+@import "../../Styles/colors";
+
+.root {
     display: flex;
     align-items: center;
 }
 
-.profile-mini__link {
+.link {
     font-family: sans-serif;
     font-size: 14px;
-    color: var(--blue);
+    color: $blue;
     margin-left: 15px;
+    text-decoration: none;
 }

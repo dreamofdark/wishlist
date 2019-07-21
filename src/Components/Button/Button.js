@@ -8,7 +8,7 @@ import { noop } from '../../Utils/helpers';
 export class Button extends Component {
     static propTypes = {
         btnText: propTypes.string.isRequired,
-        size: propTypes.oneOf('small', 'middle'),
+        size: propTypes.oneOf('small', 'medium'),
         style: propTypes.oneOf('light', 'dark'),
         isMobile: propTypes.bool,
         withIcon: propTypes.bool,

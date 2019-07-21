@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
-import classNames from 'classnames';
-import './ProfileMini.css';
+import styles from './ProfileMini.module.scss';
 import { noop } from '../../Utils/helpers';
 import {Avatar} from "../Avatar/Avatar.js";
 
@@ -30,9 +29,9 @@ export class ProfileMini extends Component {
         const { user: {name, avatar}, onClick } = this.props;
 
         return (
-            <div className="profile-mini" onClick={onClick}>
+            <div className={styles.root} onClick={onClick}>
                 <Avatar src={avatar}/>
-                <a href="" className="profile-mini__link">{name}</a>
+                <a href="" className={styles.link}>{name}</a>
             </div>
         )
     }

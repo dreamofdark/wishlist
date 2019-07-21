@@ -1,8 +1,8 @@
-.search {
+.root {
     position: relative;
 }
 
-.search__input {
+.input {
     position: relative;
     width: 500px;
     height: 50px;
@@ -16,12 +16,12 @@
     z-index: 1000;
 }
 
-.search__input,
-.search__input:focus {
+.input,
+.input:focus {
     outline: none;
 }
 
-.search-results {
+.results {
     position: absolute;
     width: 500px;
     margin-top: -25px;
@@ -33,6 +33,6 @@
     border-bottom-right-radius: 25px;
 }
 
-.search-results_empty {
+.results_empty {
     display: none;
 }
