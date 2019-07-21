@@ -1,0 +1,29 @@
+@import "../../Styles/colors";
+
+.root {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.gift {
+    background: url('./img/gift.png') center no-repeat, linear-gradient(225deg, #ff0045, #ff9890);
+    background-size: 20px auto, contain;
+}
+
+.share {
+    width: 30px;
+    height: 30px;
+    background: url('./img/share.png') 45% 50% no-repeat, linear-gradient(45deg, $blue, $purple);
+    background-size: 15px auto, contain;
+}
+
+.like {
+    background: url('./img/star.png') center no-repeat, linear-gradient(45deg, $blue, $purple);
+    background-size: 20px auto, contain;
+
+    &:hover {
+        background: url('./img/star-yellow.png') center no-repeat, linear-gradient(45deg, $blue, $purple);
+        background-size: 20px auto, contain;
+    }
+}

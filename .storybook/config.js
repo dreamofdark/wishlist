@@ -27,6 +27,7 @@ function loadStories() {
     require('../src/Components/Button/Button.stories');
     require('../src/Components/WishItem/WishItem.stories');
     require('../src/Components/Spinner/Spinner.stories');
+    require('../src/Components/RoundButton/RoundButton.stories');
     require('../src/index');
 
     // You can require as many stories as you need.

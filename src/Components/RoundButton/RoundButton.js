@@ -5,19 +5,19 @@ import styles from './RoundButton.module.scss';
 import { noop } from '../../Utils/helpers';
 
 
-export class Button extends Component {
+export class RoundButton extends Component {
     static propTypes = {
-        style: propTypes.oneOf('light', 'dark'),
+        style: propTypes.oneOf('like', 'gift', 'share'),
         onClick: propTypes.func,
     };
 
     static defaultProps = {
-        style: 'dark',
+        style: 'gift',
         onClick: noop,
     };
 
     render() {
-        const { btnText, size, style, onClick } = this.props;
+        const { style, onClick } = this.props;
         return (
             <div
                 className={classNames({

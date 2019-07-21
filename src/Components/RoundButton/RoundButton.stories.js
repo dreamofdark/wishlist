@@ -1,25 +1,16 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { text, boolean, select } from '@storybook/addon-knobs';
-import { Button } from './Button';
-
-const sizeOptions = {
-    middle: 'middle',
-    small: 'small',
-    default: '',
-};
+import { select } from '@storybook/addon-knobs';
+import { RoundButton } from './RoundButton';
 
 const styleOptions = {
-    dark: 'dark',
-    light: 'light',
+    gift: 'gift',
+    like: 'like',
+    share: 'share',
 };
 
-storiesOf('Button', module)
+storiesOf('RoundButton', module)
     .add('default', () => (
-        <Button btnText={text('BtnText', 'Кнопка')}
-                style={select('Style', styleOptions, styleOptions.dark)}
-                size={select('Size', sizeOptions, sizeOptions.default)}
-                isMobile={boolean('Mobile', false)}
-                isDisabled={boolean('Disabled', false)}
+        <RoundButton style={select('Style', styleOptions, styleOptions.gift)}
         />
     ));
