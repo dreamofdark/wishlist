@@ -12,7 +12,7 @@ export class Profile extends Component {
             name: propTypes.string,
             avatar: propTypes.string,
         }),
-        size: propTypes.oneOf('medium', 'large'),
+        size: propTypes.oneOf(['medium', 'large']),
         isMobile: propTypes.bool,
         onClick: propTypes.func,
         btnText: propTypes.string,

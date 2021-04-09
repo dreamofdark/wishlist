@@ -7,7 +7,7 @@ import { noop } from '../../Utils/helpers';
 
 export class RoundButton extends Component {
     static propTypes = {
-        style: propTypes.oneOf('like', 'gift', 'share'),
+        style: propTypes.oneOf(['like', 'gift', 'share']),
         onClick: propTypes.func,
     };
 

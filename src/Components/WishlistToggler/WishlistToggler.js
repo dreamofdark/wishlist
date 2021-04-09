@@ -44,7 +44,7 @@ export class WishlistToggler extends Component {
         const { isWishPage } = this.state;
 
         return (
-            <div>
+            <div className={styles.root}>
                 <a onClick={setWish}
                    className={classNames({
                        [styles.link]: true,

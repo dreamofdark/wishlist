@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import propTypes from 'prop-types';
-import styles from './Avatar.module.css';
+import styles from './Avatar.module.scss';
 import classNames from 'classnames';
 import { noop } from '../../Utils/helpers';
 
 export class Avatar extends Component {
     static propTypes = {
         src: propTypes.string.isRequired,
-        size: propTypes.oneOf('small', 'medium', 'large'),
+        size: propTypes.oneOf(['small', 'medium', 'large']),
         isMobile: propTypes.bool,
         onClick: propTypes.func,
     };

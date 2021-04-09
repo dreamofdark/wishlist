@@ -3,6 +3,8 @@ import propTypes from 'prop-types';
 import styles from './ProfileMini.module.scss';
 import { noop } from '../../Utils/helpers';
 import {Avatar} from "../Avatar/Avatar.js";
+import { Redirect } from 'react-router-dom';
+
 
 export class ProfileMini extends Component {
     static propTypes = {
@@ -10,7 +12,7 @@ export class ProfileMini extends Component {
             name: propTypes.string,
             avatar: propTypes.string,
         }),
-        size: propTypes.oneOf('small', 'middle'),
+        size: propTypes.oneOf(['small', 'middle']),
         isMobile: propTypes.bool,
         onClick: propTypes.func,
     };
@@ -25,13 +27,28 @@ export class ProfileMini extends Component {
         onClick: noop,
     };
 
+    state = {
+        redirect: false
+    };
+
+    onClick = () => {
+        this.setState({
+            redirect: true
+        })
+    };
+
     render() {
-        const { user: {name, avatar}, onClick } = this.props;
+        const { user: {name, avatar} } = this.props;
+        const { onClick } = this;
+
+        if(this.state.redirect) {
+            return <Redirect to={'/me'}/>
+        }
 
         return (
             <div className={styles.root} onClick={onClick}>
                 <Avatar src={avatar}/>
-                <a href="" className={styles.link}>{name}</a>
+                <span className={styles.link}>{name}</span>
             </div>
         )
     }

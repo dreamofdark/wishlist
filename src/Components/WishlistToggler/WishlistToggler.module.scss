@@ -1,7 +1,8 @@
 @import "../../Styles/colors";
+@import "../../Styles/sizes";
 
 .root {
-
+  margin-top: $default-page-margin;
 }
 
 .link {
