@@ -8,7 +8,7 @@
     "react-dom": "^16.8.6",
     "react-masonry-component": "^6.2.1",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,7 +36,7 @@
     "@storybook/addon-info": "^5.1.9",
     "@storybook/addon-knobs": "^5.1.9",
     "@storybook/addons": "^5.1.9",
-    "@storybook/react": "^5.1.9",
+    "@storybook/react": "^7.0.9",
     "@storybook/theming": "^5.1.9",
     "classnames": "^2.2.6",
     "prop-types": "^15.7.2"
